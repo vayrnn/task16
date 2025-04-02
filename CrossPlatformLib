@@ -1,0 +1,7 @@
+namespace CrossPlatformLib
+{
+    public static class StringUtils
+    {
+        public static string ToUpperInvariant(string input) => input.ToUpperInvariant();
+    }
+}
