@@ -1,0 +1,5 @@
+dotnet new classlib -n CrossPlatformLib --framework netstandard2.0
+dotnet new mstest -n CrossPlatformLib.Tests
+cd CrossPlatformLib.Tests
+dotnet add reference ../CrossPlatformLib/CrossPlatformLib.csproj
+docker run --rm -v ${PWD}:/app -w /app mcr.microsoft.com/dotnet/sdk:8.0 pwsh -c "dotnet test"
