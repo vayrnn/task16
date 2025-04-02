@@ -1,0 +1,16 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CrossPlatformLib;
+
+namespace CrossPlatformLib.Tests
+{
+    [TestClass]
+    public class StringUtilsTests
+    {
+        [TestMethod]
+        public void ToUpperInvariant_ConvertsToUpperCase()
+        {
+            string result = StringUtils.ToUpperInvariant("hello");
+            Assert.AreEqual("HELLO", result);
+        }
+    }
+}
